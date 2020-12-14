@@ -42,8 +42,8 @@ function findElement(arr, value) {
 //   }
 //   return array;
 // }
-function generateOdds(/* len */) {
-  throw new Error('Not implemented');
+function generateOdds(len) {
+  return Array(len).fill().map((e, i) => 2 * i + 1);
 }
 
 /**
@@ -242,8 +242,13 @@ function toArrayOfSquares(arr) {
  *   [ 0, 0, 0, 0, 0]         => [ 0, 0, 0, 0, 0]
  *   [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ] => [ 1, 3, 6, 10, 15, 21, 28, 36, 45, 55 ]
  */
-function getMovingSum(/* arr */) {
-  throw new Error('Not implemented');
+function getMovingSum(arr) {
+  const result = [];
+  for (let i = 0; i < arr.length; i += 1) {
+    const numb = i > 0 && i < arr.length ? arr[i] + result[i - 1] : arr[i];
+    result.push(numb);
+  }
+  return result;
 }
 
 /**
