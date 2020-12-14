@@ -35,14 +35,16 @@ function findElement(arr, value) {
  *    2 => [ 1, 3 ]
  *    5 => [ 1, 3, 5, 7, 9 ]
  */
-function generateOdds(len) {
-  const array = [];
-  for (let i = 1; i <= len; i += 1) {
-    if (i % 2) array.push(i);
-  }
-  return array;
+// function generateOdds(len) {
+//   const array = [];
+//   for (let i = 1; i <= len; i += 1) {
+//     if (i % 2) array.push(i);
+//   }
+//   return array;
+// }
+function generateOdds(/* len */) {
+  throw new Error('Not implemented');
 }
-
 
 /**
  * Returns the doubled array - elements of the specified array
